@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { GithubFormComponent } from './github-form/github-form.component';
 import { GithubComponent } from './github/github.component';
 import { DateCountPipe } from './date-count.pipe';
+import { ColorDirective } from './color.directive';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { DateCountPipe } from './date-count.pipe';
     GithubFormComponent,
     GithubComponent,
     DateCountPipe,
+    ColorDirective,
 
   ],
   imports: [
