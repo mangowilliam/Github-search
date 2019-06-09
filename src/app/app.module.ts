@@ -7,6 +7,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { GithubFormComponent } from './github-form/github-form.component';
 import { GithubComponent } from './github/github.component';
+import { DateCountPipe } from './date-count.pipe';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { GithubComponent } from './github/github.component';
     AppComponent,
     GithubFormComponent,
     GithubComponent,
+    DateCountPipe,
 
   ],
   imports: [
