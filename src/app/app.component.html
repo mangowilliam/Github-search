@@ -1,19 +1,4 @@
 <!--The content below is only a placeholder and can be replaced.-->
-
-<header class="site-header">
-  <div class="container-fluid">
-    <form>
-      <div class=" form-group">
-        <label for="name"> GITHUb SEARCH</label>
-        <a href="https://github.com/mangowilliam"><img src="./assets/git.png"></a>
-        <input type="search" name="query" class="form-control" id="name" (keyup.enter)="search() placeholder=" git name ....." required>
-      </div>
-      <button type="button" class="btn btn-success" (click)="search() ">SEARCH</button>
-    </form>
-    <input type="search" name="query" [(ngModel)]="query" (keyup.enter)="search()">
-    <button type="button" (click)="search()">Search</button>
-
-  </div>
-</header>
-<app-github>
-</app-github>
+<div class="container">
+  <app-github></app-github>
+</div>

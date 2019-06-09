@@ -13,3 +13,7 @@
 .container-fluid form-group {
   display: inline;
 }
+
+body {
+  background-image: url('logo.png');
+}
