@@ -9,6 +9,7 @@ import { GithubFormComponent } from './github-form/github-form.component';
 import { GithubComponent } from './github/github.component';
 import { DateCountPipe } from './date-count.pipe';
 import { ColorDirective } from './color.directive';
+import { RouteComponent } from './route/route.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { ColorDirective } from './color.directive';
     GithubComponent,
     DateCountPipe,
     ColorDirective,
+    RouteComponent,
 
   ],
   imports: [
