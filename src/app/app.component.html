@@ -1,5 +1,16 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    {{ title }}
-  </h1>
+
+<header class="site-header">
+  <div class="container-fluid">
+    <form>
+      <div class=" form-group">
+        <label for="name"> GITHUb SEARCH</label>
+        <input type="text" class="form-control" id="name" placeholder="git name ....." required>
+      </div>
+      <button type="submit" class="btn btn-success" [disabled]="!quotesForm.form.valid">SEARCH</button>
+    </form>
+    <a href="https://github.com/mangowilliam"><img src="./assets/git.png"></a>
+  </div>
+</header>
+<app-github>
+</app-github>

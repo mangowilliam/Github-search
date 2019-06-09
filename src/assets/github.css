@@ -1,0 +1,15 @@
+.container-fluid img {
+  width: 35px;
+  height: 35px;
+  display: inline;
+}
+
+.site-header {}
+
+.container-fluid button {
+  display: inline;
+}
+
+.container-fluid form-group {
+  display: inline;
+}
