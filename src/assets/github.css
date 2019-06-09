@@ -4,7 +4,15 @@
   display: inline;
 }
 
-.site-header {}
+.jumbotron {
+  background: transparent;
+}
+
+.jumbotron img {
+  width: 350px;
+  height: 350px;
+  margin: auto;
+}
 
 .container-fluid button {
   float: right;
