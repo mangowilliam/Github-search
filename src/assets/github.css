@@ -7,7 +7,7 @@
 .site-header {}
 
 .container-fluid button {
-  display: inline;
+  float: right;
 }
 
 .container-fluid form-group {
