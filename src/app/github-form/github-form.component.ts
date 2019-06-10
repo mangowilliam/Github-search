@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GithubserviceService } from "../githubservice.service";
 import { Github } from '../user';
-import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-github-form',
@@ -10,31 +9,21 @@ import { HttpClient } from '@angular/common/http';
 })
 export class GithubFormComponent implements OnInit {
 
-  query: any;
-  github: any[];
-  repo: any[];
+  username: string;
+  github: string;
+  repo: any;
   profile: any;
-  gitname: string;
-
-  constructor(private GithubserviceService: GithubserviceService) { }
-  getGit(query) {
-    alert(query)
-    var link = "https://api.github.com/users/" + query;
-    alert(link);
+  gitname: any;
+  constructor(){}
+  // constructor(private GithubserviceService: GithubserviceService, private http: HttpClient) { }
 
 
-    this.GithubserviceService.getgitinfo().subscribe(result => {
-      this.profile = result;
-      alert(this.profile)
-      //   console.log(github);
-      //   this.github = github;
-    });
-    // this.GithubserviceService.getgitrepo().subscribe(repo => {
-    //   console.log(repo);
-    //   this.repo = repo;
-    // });
-  }
-
+  // getGit() {
+  //   this.GithubserviceService.getgitinfo(this.github).subscribe(result => {
+  //     this.gitname = result;
+  //     console.log(this.github);
+  //   });
+  // }
   ngOnInit() {
   }
 

@@ -3,8 +3,10 @@
     <div class=" form-group">
       <label for="name"> GITHUb SEARCH</label>
       <a href="https://github.com/mangowilliam"><img src="./assets/git.png"></a>
-      <input type="search" name="query" class="form-control" [(ngModel)]="query" (keyup.enter)="search()" placeholder=" git name ....." required>
+      <input type="search" class="form-control" [(ngModel)]="github" name="github" placeholder=" git name ....." required>
     </div>
+    <p> {{result}}</p>
+    <img src="avatar_url" alt="">
     <button type="button" class="btn btn-success" (click)="getGit(query)">SEARCH</button>
   </form>
 </div>
