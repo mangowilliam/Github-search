@@ -5,6 +5,6 @@
       <a href="https://github.com/mangowilliam"><img src="./assets/git.png"></a>
       <input type="search" name="query" class="form-control" [(ngModel)]="query" (keyup.enter)="search()" placeholder=" git name ....." required>
     </div>
-    <button type="button" class="btn btn-success" (click)="search() ">SEARCH</button>
+    <button type="button" class="btn btn-success" (click)="getGit(query)">SEARCH</button>
   </form>
 </div>

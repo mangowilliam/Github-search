@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+
 import { RouterModule, Routes } from '@angular/router';
 
 
@@ -12,6 +13,8 @@ import { DateCountPipe } from './date-count.pipe';
 import { ColorDirective } from './color.directive';
 import { RouteComponent } from './route/route.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { GithubserviceService } from './githubservice.service';
+
 
 
 @NgModule({
@@ -27,9 +30,10 @@ import { NotFoundComponent } from './not-found/not-found.component';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     FormsModule
   ],
-  providers: [],
+  providers: [GithubserviceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
