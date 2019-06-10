@@ -1,6 +1,30 @@
 <div class="container">
   <app-github-form></app-github-form><br><br>
-
+  <div *ngif="myProfile">
+    <div class="row-md-12">
+      <div class='col-md-4'>
+        <p>{{myProfile.name}}{{myProfile.login}} <img src='{{myProfile.avatar_url}}' class='img-circle img-responsive'></p>
+      </div>
+      <div class='col-md-4'>
+        <ul>
+          <li>{{myProfile.bio}}</li>
+          <li>{{myProfile.blog}}</li>
+          <li>{{myProfile.email}}</li>
+          <li>{{myProfile.url}}</li>
+          <li>{{myProfile.folloers}}</li>
+          <li>{{myProfile.following}}</li>
+        </ul>
+      </div>
+      <div class='col-md-4'>
+        <p>{{myProfile.public_repos}}</P>
+        <div *ngFor="let repo be repos">
+          <p>{{repo.name}}<a href="{{repo.html_url}}" target="_blank" class="button">view</a></p>
+          <p>{{repo.description}}</p>
+        </div>
+        <p>{{myProfile.public_gists}}</P>
+      </div>
+    </div>
+  </div>
   <div class="jumbotron">
     <div class="row col-md-12">
       <div class="col-md-6">

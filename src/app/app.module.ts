@@ -14,6 +14,7 @@ import { ColorDirective } from './color.directive';
 import { RouteComponent } from './route/route.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { GithubserviceService } from './githubservice.service';
+import { MyprofileService } from './myprofile.service';
 
 
 
@@ -33,7 +34,7 @@ import { GithubserviceService } from './githubservice.service';
     HttpModule,
     FormsModule
   ],
-  providers: [GithubserviceService],
+  providers: [GithubserviceService, MyprofileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
