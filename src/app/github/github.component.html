@@ -1,9 +1,18 @@
 <div class="container">
-  <app-github-form></app-github-form><br><br>
+  <div class="container-fluid">
+    <form class="search">
+      <div class=" form-group">
+        <label for="name"> GITHUb SEARCH</label>
+        <a href="https://github.com/mangowilliam"><img src="./assets/git.png"></a>
+        <input type="search" class="form-control" [(ngModel)]="username" name="username" placeholder=" git name ....." (keyup)="getgit()">
+        <button type="button" class="btn btn-success" (click)="(myprofile())">my profile</button>
+
+      </div>
+    </form>
+  </div>
   <div class="jumbotron">
     <div class="row">
       <div class='col-md-4'>
-        <button type="button" class="btn btn-primary" (click)="(myprofile())">my profile</button>
         <div *ngIf="profile">
           <p>{{profile.name}}</p>
           <p><a href="{{profile.html_url}}" target="blank">{{profile.login}}</a></p>
@@ -30,18 +39,3 @@
     </div>
   </div>
 </div>
-<!-- <div *ngif="profile">
-    <div class="row-md-12">
-      <div class='col-md-4'>
-        <p>{{profile.name}}{{profile.login}} <img src='{{profile.avatar_url}}' class='img-circle img-responsive'></p>
-      </div>
-      <div class='col-md-4'>
-
-      </div>
-      <div class='col-md-4'>
-        <p>{{profile.public_repos}}</P>
-
-        <p>{{profile.public_gists}}</P>
-      </div>
-    </div>
-  </div> -->

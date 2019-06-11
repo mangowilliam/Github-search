@@ -11,35 +11,22 @@ import { MyprofileService } from "../myprofile.service";
 export class GithubComponent implements OnInit {
   profile: any;
   myrepos: any;
-  username: string;
-
+  username = "mangowilliam";
 
   constructor(private MyprofileService: MyprofileService) { }
-  myprofile() {
+  getgit() {
+    this.MyprofileService.getinfo(this.username);
     this.MyprofileService.getmyinfo().subscribe(result => {
       console.log(result);
       this.profile = result;
     });
-  }
-  myrepo() {
     this.MyprofileService.getmyRepos().subscribe(result => {
       console.log(result);
       this.myrepos = result;
     });
   }
-
-  // getGit() {
-  //   this.GithubserviceService.updategitname(this.gitname);
-  //   this.GithubserviceService.getgitinfo().subscribe(result => {
-  //     console.log(result);
-  //     this.github = result;
-  //   });
-  //   this.GithubserviceService.getgitrepo().subscribe(repo => {
-  //     console.log(repo);
-  //     this.repo = repo;
-  //   });
-  // }
   ngOnInit() {
+    this.getgit();
   }
 
 }

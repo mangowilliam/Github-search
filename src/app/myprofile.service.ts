@@ -24,4 +24,7 @@ export class MyprofileService {
     return this.http.get("https://api.github.com/users/" + this.username + "/repos?client_id =" + this.ClientId + "&cleint_secret=" + this.ClientSecret)
       .map(res => res.json());
   }
+  getinfo(username: string) {
+    this.username = username;
+  }
 }
