@@ -26,7 +26,7 @@ export class GithubFormComponent implements OnInit {
   getGit(username) {
     this.GithubserviceService.getgitinfo(this.username).subscribe(result => {
       this.gitname = result;
-      console.log(this.github);
+      console.log(this.gitname);
     });
   }
   ngOnInit() {
