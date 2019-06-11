@@ -1,77 +1,47 @@
 <div class="container">
   <app-github-form></app-github-form><br><br>
-  <div *ngif="myProfile">
-    <div class="row-md-12">
-      <div class='col-md-4'>
-        <p>{{myProfile.name}}{{myProfile.login}} <img src='{{myProfile.avatar_url}}' class='img-circle img-responsive'></p>
-      </div>
-      <div class='col-md-4'>
-        <ul>
-          <li>{{myProfile.bio}}</li>
-          <li>{{myProfile.blog}}</li>
-          <li>{{myProfile.email}}</li>
-          <li>{{myProfile.url}}</li>
-          <li>{{myProfile.folloers}}</li>
-          <li>{{myProfile.following}}</li>
-        </ul>
-      </div>
-      <div class='col-md-4'>
-        <p>{{myProfile.public_repos}}</P>
-        <div *ngFor="let repo be repos">
-          <p>{{repo.name}}<a href="{{repo.html_url}}" target="_blank" class="button">view</a></p>
-          <p>{{repo.description}}</p>
-        </div>
-        <p>{{myProfile.public_gists}}</P>
-      </div>
-    </div>
-  </div>
   <div class="jumbotron">
-    <div class="row col-md-12">
-      <div class="col-md-6">
-        <figure>
-          <a href="https://github.com/mangowilliam"><img src="assets/machakura.jpg"></a><br>
-          <a href="https://github.com/mangowilliam">
-            <figcaption>mangowilliam</figcaption>
-          </a>
-        </figure>
-        <p>followers 1</p>
-        <p>following 1</p>
-      </div>
-      <div class="col-md-6">
-        <h2>repositories</h2>
-        <ol>
-          <a href="https://github.com/mangowilliam/Github-search">
-            <li>githuserch</li>
-          </a>
-          <a href="https://github.com/mangowilliam/Quotes">
-            <li>quotes</li>
-          </a>
-          <a href="https://github.com/mangowilliam/goals">
-            <li>goals</li>
-          </a>
-          <a href="https://github.com/mangowilliam/pig-dice-game">
-            <li>pig-dice-game</li>
-          </a>
-          <a href="https://github.com/mangowilliam/demango-studio">
-            <li>demango studio</li>
-          </a>
-          <a href="https://github.com/mangowilliam/hello-world-1">
-            <li>hello-world-1</li>
-          </a>
-          <a href="https://github.com/mangowilliam/jsflashcard">
-            <li>jsflashcard</li>
-          </a>
-          <a href="https://github.com/mangowilliam/Triangle-Tracker">
-            <li>triangle-tracker</li>
-          </a>
-          <a href="https://github.com/mangowilliam/branching">
-            <li>branching</li>
-          </a>
-          <a href="https://github.com/mangowilliam/hello-world">
-            <li>hello-world</li>
-          </a>
-        </ol>
+    <div class="row">
+      <div class='col-md-4'>
+        <button type="button" class="btn btn-primary" (click)="(myprofile())">my profile</button>
+        <div *ngIf="profile">
+          <p>{{profile.name}}</p>
+          <p><a href="{{profile.html_url}}" target="blank">{{profile.login}}</a></p>
+          <img src="{{profile.avatar_url}}" width="200px" height="200px" class="img-circle img-responsive" alt="user-image">
+          <ul>
+            <li>{{profile.bio}}</li>
+            <li>{{profile.blog}}</li>
+            <li>{{profile.email}}</li>
+            <li>{{profile.url}}</li>
+            <li>{{profile.folloers}}</li>
+            <li>{{profile.following}}</li>
+          </ul>
+          <p><a href="{{profile.html_url}}" class="btn btn-success" target="blank">View in Github</a></p>
+        </div><br><br><br>
+        <div class='col-md-4'>
+          <button type="button" class="btn btn-primary" (click)="(myrepo())">Repository</button>
+          <div class="card-body" *ngFor="let myrepo of myrepos">
+            <p>{{myrepo.name}}<a href="{{myrepo.html_url}}" target="_blank">view</a></p>
+            <p>{{myrepo.description}}</p>
+            <p>{{myrepo.url}}</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
+<!-- <div *ngif="profile">
+    <div class="row-md-12">
+      <div class='col-md-4'>
+        <p>{{profile.name}}{{profile.login}} <img src='{{profile.avatar_url}}' class='img-circle img-responsive'></p>
+      </div>
+      <div class='col-md-4'>
+
+      </div>
+      <div class='col-md-4'>
+        <p>{{profile.public_repos}}</P>
+
+        <p>{{profile.public_gists}}</P>
+      </div>
+    </div>
+  </div> -->
