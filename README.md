@@ -49,5 +49,5 @@ So far no identified bugs but if you get any contact me on 0702658317
 ## Technologies Used
 
 1.  angular6.1.
-2.  CSS
+2.  CSS,bootstrap
 3.  html
