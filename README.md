@@ -27,13 +27,14 @@ alternatively you can down from github.com/mangowilliam.
 
 ### BDD
 
-| input                   | action          | output            |
+| input                   / action          | output            |
 | ----------------------- | --------------- | ----------------- |
 | enter a github user     | click search or | see users details |
 | name                    | enter   key     |                   |
 | enter repository name   | click search    | view repository   |
-| clickon profil/repename | strikethrough   |                   |
-
+| click on username/repo  | strikethrough   |                   |
+|doubleclick on linestrike|unstrike         |                   |
+|click githuserch or      |repository       |  view either      |
 ## Live Link
 
 <https://github.com/mangowilliam/github-search>
