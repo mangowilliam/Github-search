@@ -27,7 +27,7 @@ alternatively you can down from github.com/mangowilliam.
 
 ### BDD
 
-| input                   / action          | output            |
+| input                   | action          | output            |
 | ----------------------- | --------------- | ----------------- |
 | enter a github user     | click search or | see users details |
 | name                    | enter   key     |                   |
