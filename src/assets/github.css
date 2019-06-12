@@ -5,17 +5,32 @@
 }
 
 .jumbotron {
-  background: transparent;
+  text-align: center;
+  margin: auto;
+  width: 800px;
+}
+
+h1 {
+  color: green;
 }
 
 .jumbotron img {
-  width: 350px;
-  height: 350px;
+  width: 450px;
+  height: 450px;
   margin: auto;
+  align: center;
+}
+
+.space {
+  padding: 50px;
 }
 
 .container-fluid button {
   float: right;
+}
+
+.row {
+  text-align: center;
 }
 
 .container-fluid form-group {

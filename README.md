@@ -27,11 +27,12 @@ alternatively you can down from github.com/mangowilliam.
 
 ### BDD
 
-| input                 | action          | output            |
-| --------------------- | --------------- | ----------------- |
-| enter a github user   | click search or | see users details |
-| name                  | enter   key     |                   |
-| enter repository name | click search    | view repository   |
+| input                   | action          | output            |
+| ----------------------- | --------------- | ----------------- |
+| enter a github user     | click search or | see users details |
+| name                    | enter   key     |                   |
+| enter repository name   | click search    | view repository   |
+| clickon profil/repename | strikethrough   |                   |
 
 ## Live Link
 

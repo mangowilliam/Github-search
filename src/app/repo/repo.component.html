@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="container-fluid">
+    <form class="search">
+      <div class=" form-group">
+        <label for="name"> GITHUb SEARCH</label>
+        <a href="https://github.com/mangowilliam"><img src="./assets/git.png" /></a>
+        <input type="search" class="form-control" [(ngModel)]="username" name="username" placeholder=" git name ....." (keyup)="getgit()" />
+        <button type="button" class="btn btn-success" (click)="profile()">
+          my profile
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="jumbotron">
+    <div class="card-body" *ngFor="let myrepo of myrepos">
+      <h1 appStrikethrough>{{myrepo.name|uppercase}}<a href="{{myrepo.html_url}}" target="_blank"><br>view in github</a></h1>
+      <p>{{myrepo.description}}</p>
+      <p>{{myrepo.url}}</p>
+    </div>
+  </div>
+</div>

@@ -3,37 +3,38 @@
     <form class="search">
       <div class=" form-group">
         <label for="name"> GITHUb SEARCH</label>
-        <a href="https://github.com/mangowilliam"><img src="./assets/git.png"></a>
-        <input type="search" class="form-control" [(ngModel)]="username" name="username" placeholder=" git name ....." (keyup)="getgit()">
-        <button type="button" class="btn btn-success" (click)="(profile())">my profile</button>
-
+        <a href="https://github.com/mangowilliam"><img src="./assets/git.png" /></a>
+        <input type="search" class="form-control" [(ngModel)]="username" name="username" placeholder=" git name ....." (keyup)="getgit()" />
+        <button type="button" class="btn btn-success" (click)="profile()">
+          my profile
+        </button>
       </div>
     </form>
   </div>
   <div class="jumbotron">
     <div class="row">
-      <div class='col-md-4'>
+      <div class="column">
         <div *ngIf="profile">
-          <p>{{profile.name}}</p>
-          <p><a href="{{profile.html_url}}" target="blank">{{profile.login}}</a></p>
-          <img src="{{profile.avatar_url}}" width="200px" height="200px" class="img-circle img-responsive" alt="user-image">
-          <ul>
-            <li>{{profile.bio}}</li>
-            <li>{{profile.blog}}</li>
-            <li>{{profile.email}}</li>
-            <li>{{profile.url}}</li>
-            <li>{{profile.folloers}}</li>
-            <li>{{profile.following}}</li>
-          </ul>
-          <p><a href="{{profile.html_url}}" class="btn btn-success" target="blank">View in Github</a></p>
-        </div><br><br><br>
-        <div class='col-md-4'>
-          <button type="button" class="btn btn-primary" (click)="(myrepos())">Repository</button>
-          <div class="card-body" *ngFor="let myrepo of myrepos">
-            <p>{{myrepo.name}}<a href="{{myrepo.html_url}}" target="_blank">view</a></p>
-            <p>{{myrepo.description}}</p>
-            <p>{{myrepo.url}}</p>
-          </div>
+          <h1 appStrikethrough>{{ profile.name | uppercase }}</h1>
+          <p>
+            profile has been here for {{ profile.created_at | dateCount }} days
+          </p>
+          <p>
+            <a href="{{ profile.html_url }}" target="blank">{{
+              profile.login
+            }}</a>
+          </p>
+          <img src="{{ profile.avatar_url }}" width="200px" height="200px" class="img-circle img-responsive" alt="user-image" /><br />
+          <p>Date {{ profile.created_at }}</p>
+          <p>{{ profile.bio }}</p>
+          <p>{{ profile.blog }}</p>
+          <p>{{ profile.email }}</p>
+          <p>{{ profile.url }}</p>
+          <p>{{ profile.folloers }}</p>
+          <p>{{ profile.following }}</p>
+          <p>
+            <a href="{{ profile.html_url }}" class="btn btn-success" target="blank">View in Github</a>
+          </p>
         </div>
       </div>
     </div>
