@@ -5,7 +5,7 @@
         <label for="name"> GITHUb SEARCH</label>
         <a href="https://github.com/mangowilliam"><img src="./assets/git.png"></a>
         <input type="search" class="form-control" [(ngModel)]="username" name="username" placeholder=" git name ....." (keyup)="getgit()">
-        <button type="button" class="btn btn-success" (click)="(myprofile())">my profile</button>
+        <button type="button" class="btn btn-success" (click)="(profile())">my profile</button>
 
       </div>
     </form>
@@ -28,7 +28,7 @@
           <p><a href="{{profile.html_url}}" class="btn btn-success" target="blank">View in Github</a></p>
         </div><br><br><br>
         <div class='col-md-4'>
-          <button type="button" class="btn btn-primary" (click)="(myrepo())">Repository</button>
+          <button type="button" class="btn btn-primary" (click)="(myrepos())">Repository</button>
           <div class="card-body" *ngFor="let myrepo of myrepos">
             <p>{{myrepo.name}}<a href="{{myrepo.html_url}}" target="_blank">view</a></p>
             <p>{{myrepo.description}}</p>
